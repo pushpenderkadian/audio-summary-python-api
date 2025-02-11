@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+speech_recognition
+pydantic
+requests
+python-dotenv
