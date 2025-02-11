@@ -11,7 +11,7 @@ HF_API_URL = "https://api-inference.huggingface.co/models/facebook/wav2vec2-larg
 HF_API_TOKEN = os.getenv("HUGGINGFACE_API_KEY")
 HF_SUMMARIZER_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
 
-def query_huggingface_api(model_url: str, headers: dict={
+def query_huggingface_api(model_url: str=HF_SUMMARIZER_URL, headers: dict={
         "Authorization": f"Bearer {HF_API_TOKEN}"
     }, payload: dict={}):
     response = requests.post(model_url, headers=headers, json=payload)
