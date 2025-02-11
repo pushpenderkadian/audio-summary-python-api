@@ -51,7 +51,7 @@ async def generate_summary(file: UploadFile = File(...)):
         "inputs": transcription_text,
     }
 
-    summarization_response = query_huggingface_api(HF_SUMMARIZER_URL, headers, summarization_payload)
+    summarization_response = query_huggingface_api(headers= headers, summarization_payload=summarization_payload)
     summary_text = summarization_response[0].get("summary_text", "Summary generation failed.")
 
     # 3. Generate AI-powered titles (Title Suggestions)
@@ -74,3 +74,6 @@ async def generate_summary(file: UploadFile = File(...)):
     )
 
 
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
