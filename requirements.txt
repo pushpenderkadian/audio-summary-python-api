@@ -1,6 +1,7 @@
 fastapi
 uvicorn
-speech_recognition
+SpeechRecognition
 pydantic
 requests
 python-dotenv
+python-multipart

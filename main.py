@@ -51,7 +51,7 @@ async def generate_summary(file: UploadFile = File(...)):
         "inputs": transcription_text,
     }
 
-    summarization_response = query_huggingface_api(headers= headers, summarization_payload=summarization_payload)
+    summarization_response = query_huggingface_api(headers= headers, payload=summarization_payload)
     summary_text = summarization_response[0].get("summary_text", "Summary generation failed.")
 
     # 3. Generate AI-powered titles (Title Suggestions)
